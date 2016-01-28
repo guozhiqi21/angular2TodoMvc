@@ -1,0 +1,17 @@
+<footer class="footer">
+    <span class="todo-count">
+        <strong>{{remainingTodosCount}} items left</strong>
+        <ul class="filters">
+            <li>
+                <a [class]="{selected: currentFilterKey === 'SHOW_ALL_TODOS'}" href="#" (click)="showAllTodos()">All</a>
+            </li>
+            <li>
+                <a [class]="{selected: currentFilterKey === 'SHOW_ACTIVE_TODOS'}" href="#" (click)="showActiveTodos()">Active</a>
+            </li>
+            <li>
+                <a [class]="{selected: currentFilterKey === 'SHOW_COMPLETED_TODOS'}" href="#" (click)="showCompletedTodos()">Completed</a>
+            </li>
+        </ul>
+    </span>
+    <button class="clear-completed" (click)="clearCompletedTodos()">Clear completed</button>
+</footer>

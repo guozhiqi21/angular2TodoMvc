@@ -1,0 +1,7 @@
+<section class="main">
+    <input class="toggle-all" id="toggle-all" type="checkbox" (change)="toggleAll($event)">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul class="todo-list">
+        <todo-item *ngFor="#item of TodoList" [todo]="item"></todo-item>
+    </ul>
+</section>

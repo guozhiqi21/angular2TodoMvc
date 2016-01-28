@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tastejs/todomvc-app-css/master/index.css">
+</head>
+<body>
+<todo-app>
+    <div>Loading.....</div>
+</todo-app>
+<!-- 1. Load libraries -->
+<!-- 1. Load libraries -->
+<script src="./node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="./node_modules/systemjs/dist/system.src.js"></script>
+<script src="./node_modules/rxjs/bundles/Rx.js"></script>
+<script src="./node_modules/angular2/bundles/angular2.dev.js"></script>
+<script src="./node_modules/typescript/lib/typescript.js"></script>
+<script src="./node_modules/angular2/bundles/http.js"></script>
+
+<!-- 2. Configure SystemJS -->
+<script>
+    System.config({
+        transpiler: 'typescript',
+        typescriptOptions: {emitDecoratorMetadata: true},
+        packages: {'app': {defaultExtension: 'ts'}}
+    });
+</script>
+
+<!-- 3. Bootstrap -->
+<script>
+
+    System.import('app/boot')
+            .then(null, console.error.bind(console));
+
+</script>
+
+
+</body>
+</html>

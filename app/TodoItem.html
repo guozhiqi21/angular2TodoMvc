@@ -1,0 +1,11 @@
+<li [class]="todo">
+    <div class="view">
+        <input class="toggle" type="checkbox" (change)="toggleCompleted($event)" [checked]="todo">
+        <label (dblclick)="toggleEditable($event)">{{todo}}</label>
+        <button class="destroy" (click)="destroy()"></button>
+    </div>
+    <form (submit)="updateTodo($event, editabletodo)">
+        <input #editabletodo class="edit" [value]="todo">
+    </form>
+</li>
+
